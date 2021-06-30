@@ -1,5 +1,5 @@
 import streamlit as st
-from pycaret.classification import *
+from pycaret.regression import *
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -28,7 +28,7 @@ def run():
     st.sidebar.info('The goal of this sharing is to try to use AutoML Pycaret's powerful tool for predicting the price of zinc based on a number of chosen parameters. Nine of main ore product and energy parameters were chosen, namely: Gold, Iron-Ore, Lead, Silver, Zinc, rock phosphate, Crude Oil, Natural Gas, Rubber. I added to this 6 agricultural source parameters that could be useful and whose price fluctuation could be influential, Rice, Maize, Coffee, Tea, Cotton and Plywood. The data represents a 30-years history of the official selling prices of each parameter. The dataset contains 14 features with 343 observations (between May 1991 and May 2021). Data have been divised on three parts 95% of train and test (respectively 70% and 30%) and 5% as an unseen data for the last validation of the best choosen model.')
     st.sidebar.success('Forcasting & Futuristics')
     
-    st.sidebar.image(image_fraude)
+    st.sidebar.image(image_2)
 
     st.title("Zinc price prediction using PyCaret")
 
