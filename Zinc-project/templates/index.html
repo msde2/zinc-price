@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML DEployment Workshop -v1</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: #100;">
+ <div class="login">
+	<h1>Zinc Price Prediction Tool</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Gold" placeholder="Gold" required="required" /><br>
+        <input type="text" name="Silver" placeholder="Silver" required="required" /><br>
+	<input type="text" name="Iron-Ore" placeholder="Iron-Ore" required="required" /><br>
+	<input type="text" name="Crude_Oil" placeholder="Crude_Oil" required="required" /><br>
+	<input type="text" name="rockphos" placeholder="rockphos" required="required" /><br>
+	
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Calculate the Zinc Price Prediction </button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
